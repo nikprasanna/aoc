@@ -24,7 +24,7 @@ SUIT_MAP = {
     'A': 14,
 }
 
-class WinningHands(Enum):
+class WinningTypes(Enum):
     HIGH_CARD = 0
     ONE_PAIR = 1
     TWO_PAIR = 2
@@ -44,7 +44,11 @@ class Hand:
         print(self.cards, self.bid)
 
     def play_round(self, opponent_hand: 'Hand'):
-
+        pass
 
 for raw_value in raw_data:
     hand = Hand(raw_value)
+
+# Bucket all cards into their winning type (play_round)
+# Sort each bucket (implement sort method on Hand to compare first card)
+# Iterate through winning hands from FIVE_OF_A_KIND down
